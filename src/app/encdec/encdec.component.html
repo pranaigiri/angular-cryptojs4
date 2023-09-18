@@ -1,0 +1,15 @@
+<div class="container p-5">
+    <h6 class="title-6">Enc / Dec</h6>
+    <div class="row">
+        <textarea class="form-control mb-2 c-textarea" [(ngModel)]="inputText"></textarea>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button type="button" class="btn btn-primary me-2" (click)="encrypt(inputText)">Encrypt</button>
+            <button type="button" class="btn btn-secondary me-2"  (click)="decrypt(inputText)">Decrypt</button>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <textarea class="form-control mt-2 c-textarea" [ngModel]="outputText"></textarea>
+    </div>
+</div>
