@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   aesKey: "2B7E151628AED2A6ABF7158809CF4F3C",
+  iv: "4512631236589784",
 };
 
 /*

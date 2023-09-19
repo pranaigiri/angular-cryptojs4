@@ -25,12 +25,12 @@ export class EncdecComponent implements OnInit {
 
   encrypt(plainText : string){
     console.log("Encrypting : ", plainText);
-    this.outputText = this.encDec.encrypt(plainText);
+    this.outputText = this.encDec.encryptForAsp(plainText);
   }
 
   decrypt(encryptedText : string){
     console.log("Decrypting : ", encryptedText);
-    this.outputText = this.encDec.decrypt(encryptedText);
+    this.outputText = this.encDec.decryptForAsp(encryptedText);
   }
 
   
