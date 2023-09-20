@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  aesKey: "2B7E151628AED2A6ABF7158809CF4F3C",
-  iv: "4512631236589784",
+  aesKey: "D1E5A2B3F4C6879A0E6F152839CDAEF7",
+  iv: "E74F39F2C975EAB8",
 };
 
 /*

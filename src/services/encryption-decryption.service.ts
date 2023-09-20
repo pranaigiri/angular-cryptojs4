@@ -24,8 +24,8 @@ decrypt(encryptedText:string){
 
 // -------------------------------------------------------------- COMPATIBLE WITH ASP.NET WEB API
 
-key = CryptoJS.enc.Utf8.parse(environment.aesKey);
-iv  = CryptoJS.enc.Utf8.parse(environment.iv);
+private readonly key = CryptoJS.enc.Utf8.parse(environment.aesKey);
+private readonly iv  = CryptoJS.enc.Utf8.parse(environment.iv);
 
 // Methods for the encrypt and decrypt Using AES
 encryptForAsp(data:any) {
@@ -35,7 +35,6 @@ encryptForAsp(data:any) {
       mode: CryptoJS.mode.CBC,
       padding: CryptoJS.pad.Pkcs7
   });
-  console.log('Encrypted :' + encrypted);
   this.decryptForAsp(encrypted);
   return encrypted;
 }
@@ -47,9 +46,6 @@ decryptForAsp(decString:any) {
       mode: CryptoJS.mode.CBC,
       padding: CryptoJS.pad.Pkcs7
   });
-  console.log('Decrypted : ' + decrypted);
-  console.log('utf8 = ' + decrypted.toString(CryptoJS.enc.Utf8));
-
   return decrypted.toString(CryptoJS.enc.Utf8);
 }
 
